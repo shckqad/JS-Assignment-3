@@ -41,7 +41,7 @@ function vaxCard(name, doseTwo, doseOne){
 this.checkDays = function(){
   this.difference = this.today.getTime() - this.doseTwo.getTime();
   var difference = Math.floor(difference / 86400000);
-  return difference;
+  return difference; //Make use of checkDays Function!
 };
 
 //Vaccine card array
@@ -62,9 +62,12 @@ if (idArray[i].expired == true) {
   document.write('<td>ID EXPIRED</td>')}
   //Formula for name and ID check!
 else if(vaxCardArray[i].name !== idArray[i].name){
-  document.write('<td>ID EXPIRED</td>')
+  document.write('<td>Name Unmatched</td>')//Replace with Unmatched names instead of ID Expired
 } else {
-  document.write('<td>ALLOWED ENTRY</td>');
+  document.write('<td>Name Matched!</td>');
 }
 document.write('</tr>')
+}
+if (vaxCardArray[i].date >= 14) {
+  console.log('Vaccine Approved')
 }
