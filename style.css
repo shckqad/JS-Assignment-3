@@ -37,10 +37,6 @@
   padding: 20px;
   color: white;
 }
-
-button {
-    display: inline-block;
-    padding: 10px 20px;
 }
 #table {
     display: block;
