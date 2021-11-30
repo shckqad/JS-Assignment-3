@@ -1,0 +1,52 @@
+.header {
+  padding: 60px;
+  text-align: center;
+  color: black;
+  font-size: 30px;
+}
+
+  body {
+     padding: 20px;
+     background-image: url('images/background.jpg');
+     background-blend-mode: lighten;
+     background-size: 20%;
+     background-size: cover;
+     margin: 12px;
+     font-family: 'Open-sans', sans-serif;
+}
+
+.intro {
+  background-color: clear;
+  border: 2px solid black;
+  padding: 20px;
+  color: white;
+}
+
+#corncurls {
+  background-color: clear;
+  border: 2px solid black;
+  margin-top: 20px;
+  padding: 20px;
+  color: white;
+}
+
+#message {
+  background-color: clear;
+  border: 2px solid Black;
+  margin-top: 20px;
+  padding: 20px;
+  color: white;
+}
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+}
+#table {
+    display: block;
+    margin-top: 20px;
+}
+th, td {
+    border: 1px solid black;
+    padding: 5px;
+}
