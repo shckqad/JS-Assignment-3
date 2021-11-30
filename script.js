@@ -6,18 +6,18 @@ function idCard(name, expiryDate) {
   this.checkExpiration = function () {
     var difference = this.expiryDate.getTime() - this.currentDay.getTime();
      var sign = Math.sign(difference);
-     if (sign == 1) {
+     if (sign == -1) {
        return true;
      } else{
        return false;
      }
     };
-this.expiry = this.checkExpiration();
+this.expired = this.checkExpiration();
 }
 
 //ID card array
 var visitor1 = new idCard('Jack Black', '2022/06/03');
-var visitor2 = new idCard('Bellela Thorne', '2022/06/03');
+var visitor2 = new idCard('Bellela Thorne', '2022/01/13');
 var visitor3 = new idCard('Amanda Joseph', '2020/06/03');
 
 var idArray = [visitor1, visitor2, visitor3];
@@ -53,14 +53,14 @@ var vaxCardArray = [visitor4, visitor5, visitor6];
 // Creating for loop
 
 for (var i = 0; i < idArray.length; i++) {
+  document.write('<tr>')
+  document.write('<td>', idArray[i].name , '</td>')
 if (idArray[i].expired == true) {
-  console.log('ID Expired');
+  document.write('<td>ID EXPIRED</td>')}
+else if(vaxCardArray[i].name !== idArray[i].name){
+  document.write('<td>FRAUD</td>')
 } else {
-  console.log('ID Valid');
+  document.write('<td>ALLOWED ENTRY</td>');
 }
-if (vaxCardArray[i].name == idArray[i].name){
-  console.log('Name Match');
-} else {
-  console.log('FRAUD!');
-}
+document.write('</tr>')
 }
